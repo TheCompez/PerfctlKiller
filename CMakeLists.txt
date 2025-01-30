@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(PerfctlKiller LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_executable(${CMAKE_PROJECT_NAME} main.cpp)
+
+include(GNUInstallDirs)
+install(TARGETS ${CMAKE_PROJECT_NAME}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
